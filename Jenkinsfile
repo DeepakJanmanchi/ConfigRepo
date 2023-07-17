@@ -30,7 +30,7 @@ pipeline{
         stage('Upload'){
             steps{
                 script{
-                    changeset = snDevOpsConfig(applicationName:"TrialApp",deployableName:"Development_1",isValidated:true,continueWithLatest:true,target:"deployable",namePath:"test/NoIMpact",configFile:"*.json",dataFormat:"json")
+                    changeset = snDevOpsConfig(applicationName:"TrialApp",deployableName:"Development_1",isValidated:true,continueWithLatest:true,target:"deployable","autoDelete":"false",namePath:"test/NoIMpact",configFile:"*.json",dataFormat:"json")
                 }
                 echo "${changeset}"
             }
