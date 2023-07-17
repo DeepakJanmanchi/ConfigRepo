@@ -13,6 +13,7 @@ pipeline{
                     changeset = snDevOpsConfigUpload(applicationName:"TrialApp",deployableName:"Development_1", "autoCommit": true, "autoPublish": true, "autoValidate": true, target:"deployable",namePath:"test/NoIMpact",configFile:"config.json",dataFormat:"json")
                 }
                 echo "${changeset}"
+                echo "${autoDelete}"
             }
         }
     }
